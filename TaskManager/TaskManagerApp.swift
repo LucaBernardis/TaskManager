@@ -18,7 +18,7 @@ struct TaskManagerApp: App {
                 Button("Add New Task"){
                     
                 }
-                .keyboardShortcut(KeyEquivalent("n"), modifiers: .command)
+                .keyboardShortcut(KeyEquivalent("t"), modifiers: .command)
             }
             
             CommandGroup(after: .newItem){
@@ -28,5 +28,11 @@ struct TaskManagerApp: App {
                 .keyboardShortcut(KeyEquivalent("g"), modifiers: .command)
             }
         }
+        
+        WindowGroup("Special"){
+            Text("Second Window")
+                .frame(minWidth: 200, idealWidth: 300, minHeight: 200)
+        }
+        .defaultPosition(.center)
     }
 }
